@@ -8,13 +8,14 @@ interface LayoutProps {
   companyLink: string;
 }
 
-const Layout: React.SFC<LayoutProps> = ({ children, companyLogoSrc, companyLink }) => {
+const Layout: React.SFC<LayoutProps> = ({
+  children,
+  companyLogoSrc,
+  companyLink
+}) => {
   return (
     <div className={styles.layout}>
-      <Header
-        companyLogoSrc={companyLogoSrc}
-        companyLink={companyLink}
-      />
+      <Header companyLogoSrc={companyLogoSrc} companyLink={companyLink} />
       {children}
     </div>
   );

@@ -1,7 +1,8 @@
 import * as React from "react";
+import classNames from "classnames";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import Layout from "../templates/Layout";
+import { Layout } from "../templates";
 import { Card, CompanyOverview } from "../components";
 
 import { company, companyParamsStructure } from "../data";
@@ -15,7 +16,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
       <Layout companyLogoSrc={company.logoSrc} companyLink={company.link}>
         <div className="viewport center column">
           <div
-            className={[styles.wrapper, "center", "column", "mb-4"].join(" ")}
+            className={classNames(styles.wrapper, "center", "column", "mb-4")}
           >
             <CompanyOverview
               name={company.name}
@@ -30,8 +31,8 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             className={styles.tabs}
             selectedTabClassName={styles.selectedTab}
           >
-            <div className={[styles.wrapper, "center", "column"].join(" ")}>
-              <TabList className={[styles.tabList, "mb-2"].join(" ")}>
+            <div className={classNames(styles.wrapper, "center", "column")}>
+              <TabList className={classNames(styles.tabList, "mb-2")}>
                 {companyParamsStructure
                   .map(
                     (category, i) =>
@@ -54,7 +55,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                   company.params[category.id] && (
                     <TabPanel
                       key={`tab-panel--${k}`}
-                      className={[styles.tabContent].join(" ")}
+                      className={classNames(styles.tabContent)}
                     >
                       {category.children &&
                         category.children.map(

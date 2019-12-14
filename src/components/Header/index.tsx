@@ -1,4 +1,5 @@
 import * as React from "react";
+import classNames from "classnames";
 import { Link } from "gatsby";
 
 import { Button } from "../";
@@ -16,8 +17,8 @@ const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
     <>
       <header className={styles.header}>
         <nav className="center">
-          <Link to="/" className={[styles.mainLogo, "center"].join(" ")}>
-            <img src={avLogoSrc} alt=""/>
+          <Link to="/" className={classNames(styles.mainLogo, "center")}>
+            <img src={avLogoSrc} alt="" />
           </Link>
           <Link to="/results" className="secondary-color-text hide-mobile">
             ⬅ Back to Results
@@ -26,7 +27,11 @@ const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
         <img src={companyLogoSrc} alt="" className={styles.logo} />
         <div className="align-center">
           <Button className="hide-mobile">Contact Ogilvy</Button>
-          <img src="https://source.unsplash.com/random" alt="" className={styles.avatar} />
+          <img
+            src="https://source.unsplash.com/random"
+            alt=""
+            className={styles.avatar}
+          />
         </div>
       </header>
       <div className={styles.headerCompensator}></div>

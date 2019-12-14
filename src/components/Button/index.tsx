@@ -1,4 +1,5 @@
 import * as React from "react";
+import classNames from "classnames";
 
 import * as styles from "./button.module.scss";
 
@@ -9,7 +10,7 @@ interface ButtonProps {
 
 const Button: React.SFC<ButtonProps> = ({ children, onClick, className }) => {
   return (
-    <button className={[styles.button, className].join(" ")} onClick={onClick}>
+    <button className={classNames(styles.button, className)} onClick={onClick}>
       {children}
     </button>
   );

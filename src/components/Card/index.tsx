@@ -1,4 +1,5 @@
 import * as React from "react";
+import classNames from "classnames";
 import { Line } from "rc-progress";
 
 import * as styles from "./card.module.scss";
@@ -13,11 +14,20 @@ interface CardProps {
   params?: any[];
 }
 
-const Card: React.SFC<CardProps> = ({ className, name, params, lines, icon, description }) => {
+const Card: React.SFC<CardProps> = ({
+  className,
+  name,
+  params,
+  lines,
+  icon,
+  description
+}) => {
   return (
-    <section className={[styles.card, "column", "align-center", className].join(" ")}>
-      <div className={[styles.info, "column", "align-center"].join(" ")}>
-        <img src={icon} className="mb-1" alt={name}/>
+    <section
+      className={classNames(styles.card, "column", "align-center", className)}
+    >
+      <div className={classNames(styles.info, "column", "align-center")}>
+        <img src={icon} className="mb-1" alt={name} />
         <h3 className="mb-1 text-uppercase text-normal">{name}</h3>
         <p className="secondary-color-text text-center mb-2">{description}</p>
       </div>
@@ -32,7 +42,15 @@ const Card: React.SFC<CardProps> = ({ className, name, params, lines, icon, desc
                 strokeColor="var(--main-color)"
                 trailColor="var(--secondary-light-color)"
               />
-              <p className={params && params[line.id]? "main-color-text mt-h mb-1": "secondary-color-text mt-h mb-1"}>{line.name}</p>
+              <p
+                className={
+                  params && params[line.id]
+                    ? "main-color-text mt-h mb-1"
+                    : "secondary-color-text mt-h mb-1"
+                }
+              >
+                {line.name}
+              </p>
             </div>
           ))}
       </div>
