@@ -8,9 +8,7 @@ import { Card, CompanyOverview } from "../components";
 import { company, companyParamsStructure } from "../data";
 import * as styles from "./index.module.scss";
 
-interface IndexPageProps {}
-
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
+export default class IndexPage extends React.Component<{}, {}> {
   public render() {
     return (
       <Layout companyLogoSrc={company.logoSrc} companyLink={company.link}>
@@ -43,7 +41,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                         >
                           {category.name}
                         </Tab>
-                      )
+                      ),
                   )
                   .filter(Boolean)}
               </TabList>
@@ -72,10 +70,10 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                                 description={subCategory.description}
                                 icon={subCategory.icon}
                               />
-                            )
+                            ),
                         )}
                     </TabPanel>
-                  )
+                  ),
               )
               .filter(Boolean)}
           </Tabs>

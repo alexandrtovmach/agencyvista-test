@@ -34,7 +34,7 @@ const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
           />
         </div>
       </header>
-      <div className={styles.headerCompensator}></div>
+      <div className={styles.headerCompensator}/>
     </>
   );
 };

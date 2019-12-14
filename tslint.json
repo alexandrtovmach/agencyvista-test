@@ -6,7 +6,9 @@
     ],
     "jsRules": {},
     "rules": {
-      "quotemark": false,
+      "max-line-length": false,
+      "quotemark": [true, "double"],
+      "object-literal-sort-keys": false,
       "ordered-imports": false,
       "interface-name": false,
       "jsx-no-multiline-js": false

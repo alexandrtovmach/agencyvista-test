@@ -11,7 +11,7 @@ export const company: X | any = {
   city: "New York",
   date: "10 years",
   link: "https://www.ogilvy.com",
-  logoSrc: logoSrc,
+  logoSrc,
   descriprion:
     "In the beginning, there was one Ogilvy, the company founded by David Ogilvy in 1948. Today, there is again one Ogilvy, in 83 countries and 132 offices. We are one doorway to a creative network, re-founded to make brands matter in a complex, noisy, hyper-connected world.",
   params: {
@@ -20,72 +20,72 @@ export const company: X | any = {
         smallBusinessRevenue: 0,
         mediumBusinessRevenue: 10,
         largeBusinessRevenue: 60,
-        enterpriseRevenue: 20
+        enterpriseRevenue: 20,
       },
       industryFocus: {
         healthcare: 50,
         businessServices: 20,
         automotive: 15,
-        financialServices: 10
-      }
+        financialServices: 10,
+      },
     },
     performance: {
       deliverySpeed: {
         ideaGeneration: 90,
         buildTeam: 70,
         development: 50,
-        promotion: 30
+        promotion: 30,
       },
       economicMark: {
         finances: 20,
         time: 0,
         humanResources: 90,
-        rate: 90
-      }
+        rate: 90,
+      },
     },
     portfolio: {
       clientSize: {
         smallBusinessRevenue: 0,
         mediumBusinessRevenue: 10,
         largeBusinessRevenue: 60,
-        enterpriseRevenue: 20
+        enterpriseRevenue: 20,
       },
       industryFocus: {
         healthcare: 50,
         businessServices: 20,
         automotive: 15,
-        financialServices: 10
-      }
+        financialServices: 10,
+      },
     },
     reviews: {
       deliverySpeed: {
         ideaGeneration: 90,
         buildTeam: 70,
         development: 50,
-        promotion: 30
+        promotion: 30,
       },
       economicMark: {
         finances: 20,
         time: 0,
         humanResources: 90,
-        rate: 90
-      }
+        rate: 90,
+      },
     },
     latest: {
       clientSize: {
         smallBusinessRevenue: 0,
         mediumBusinessRevenue: 10,
         largeBusinessRevenue: 60,
-        enterpriseRevenue: 20
+        enterpriseRevenue: 20,
       },
       industryFocus: {
         healthcare: 50,
         businessServices: 20,
         automotive: 15,
-        financialServices: 10
-      }
-    }
-  }
+        financialServices: 10,
+      },
+    },
+  },
 };
 
 export const companyParamsStructure = [
@@ -102,21 +102,21 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Small Business (Less than $1M in revenue)",
-            id: "smallBusinessRevenue"
+            id: "smallBusinessRevenue",
           },
           {
             name: "Medium Business ($1M-$10M)",
-            id: "mediumBusinessRevenue"
+            id: "mediumBusinessRevenue",
           },
           {
             name: "Large Business ($10M-$1B)",
-            id: "largeBusinessRevenue"
+            id: "largeBusinessRevenue",
           },
           {
             name: "Enterprise ($1B+)",
-            id: "enterpriseRevenue"
-          }
-        ]
+            id: "enterpriseRevenue",
+          },
+        ],
       },
       {
         id: "industryFocus",
@@ -127,23 +127,23 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Healthcare",
-            id: "healthcare"
+            id: "healthcare",
           },
           {
             name: "Business Services",
-            id: "businessServices"
+            id: "businessServices",
           },
           {
             name: "Automotive",
-            id: "automotive"
+            id: "automotive",
           },
           {
             name: "Financial Services",
-            id: "financialServices"
-          }
-        ]
-      }
-    ]
+            id: "financialServices",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "performance",
@@ -158,21 +158,21 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Idea generation",
-            id: "ideaGeneration"
+            id: "ideaGeneration",
           },
           {
             name: "Build team",
-            id: "buildTeam"
+            id: "buildTeam",
           },
           {
             name: "Development",
-            id: "development"
+            id: "development",
           },
           {
             name: "Promotion",
-            id: "promotion"
-          }
-        ]
+            id: "promotion",
+          },
+        ],
       },
       {
         id: "economicMark",
@@ -182,23 +182,23 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Finances",
-            id: "finances"
+            id: "finances",
           },
           {
             name: "Time",
-            id: "time"
+            id: "time",
           },
           {
             name: "Human Resources",
-            id: "humanResources"
+            id: "humanResources",
           },
           {
             name: "Rate",
-            id: "rate"
-          }
-        ]
-      }
-    ]
+            id: "rate",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "portfolio",
@@ -213,21 +213,21 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Small Business (Less than $1M in revenue)",
-            id: "smallBusinessRevenue"
+            id: "smallBusinessRevenue",
           },
           {
             name: "Medium Business ($1M-$10M)",
-            id: "mediumBusinessRevenue"
+            id: "mediumBusinessRevenue",
           },
           {
             name: "Large Business ($10M-$1B)",
-            id: "largeBusinessRevenue"
+            id: "largeBusinessRevenue",
           },
           {
             name: "Enterprise ($1B+)",
-            id: "enterpriseRevenue"
-          }
-        ]
+            id: "enterpriseRevenue",
+          },
+        ],
       },
       {
         id: "industryFocus",
@@ -238,23 +238,23 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Healthcare",
-            id: "healthcare"
+            id: "healthcare",
           },
           {
             name: "Business Services",
-            id: "businessServices"
+            id: "businessServices",
           },
           {
             name: "Automotive",
-            id: "automotive"
+            id: "automotive",
           },
           {
             name: "Financial Services",
-            id: "financialServices"
-          }
-        ]
-      }
-    ]
+            id: "financialServices",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "reviews",
@@ -269,21 +269,21 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Idea generation",
-            id: "ideaGeneration"
+            id: "ideaGeneration",
           },
           {
             name: "Build team",
-            id: "buildTeam"
+            id: "buildTeam",
           },
           {
             name: "Development",
-            id: "development"
+            id: "development",
           },
           {
             name: "Promotion",
-            id: "promotion"
-          }
-        ]
+            id: "promotion",
+          },
+        ],
       },
       {
         id: "economicMark",
@@ -293,23 +293,23 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Finances",
-            id: "finances"
+            id: "finances",
           },
           {
             name: "Time",
-            id: "time"
+            id: "time",
           },
           {
             name: "Human Resources",
-            id: "humanResources"
+            id: "humanResources",
           },
           {
             name: "Rate",
-            id: "rate"
-          }
-        ]
-      }
-    ]
+            id: "rate",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "latest",
@@ -324,21 +324,21 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Small Business (Less than $1M in revenue)",
-            id: "smallBusinessRevenue"
+            id: "smallBusinessRevenue",
           },
           {
             name: "Medium Business ($1M-$10M)",
-            id: "mediumBusinessRevenue"
+            id: "mediumBusinessRevenue",
           },
           {
             name: "Large Business ($10M-$1B)",
-            id: "largeBusinessRevenue"
+            id: "largeBusinessRevenue",
           },
           {
             name: "Enterprise ($1B+)",
-            id: "enterpriseRevenue"
-          }
-        ]
+            id: "enterpriseRevenue",
+          },
+        ],
       },
       {
         id: "industryFocus",
@@ -349,22 +349,22 @@ export const companyParamsStructure = [
         params: [
           {
             name: "Healthcare",
-            id: "healthcare"
+            id: "healthcare",
           },
           {
             name: "Business Services",
-            id: "businessServices"
+            id: "businessServices",
           },
           {
             name: "Automotive",
-            id: "automotive"
+            id: "automotive",
           },
           {
             name: "Financial Services",
-            id: "financialServices"
-          }
-        ]
-      }
-    ]
-  }
+            id: "financialServices",
+          },
+        ],
+      },
+    ],
+  },
 ];

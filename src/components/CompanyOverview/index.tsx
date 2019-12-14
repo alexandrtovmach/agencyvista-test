@@ -19,7 +19,7 @@ const CompanyOverview: React.SFC<CompanyOverviewProps> = ({
   date,
   city,
   link,
-  descriprion
+  descriprion,
 }) => {
   return (
     <>

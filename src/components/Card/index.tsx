@@ -20,7 +20,7 @@ const Card: React.SFC<CardProps> = ({
   params,
   lines,
   icon,
-  description
+  description,
 }) => {
   return (
     <section

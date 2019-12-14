@@ -11,7 +11,7 @@ interface LayoutProps {
 const Layout: React.SFC<LayoutProps> = ({
   children,
   companyLogoSrc,
-  companyLink
+  companyLink,
 }) => {
   return (
     <div className={styles.layout}>
