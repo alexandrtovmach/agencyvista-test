@@ -5,6 +5,7 @@
   border-radius: 2px;
   padding: var(--size-1);
   margin: var(--size-1);
+  justify-content: space-between;
 
   @media (max-width: 960px) {
     margin-left: 0;
