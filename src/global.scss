@@ -1,0 +1,29 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-text {
+  font-size: 80%;
+  color: var(--secondary-dark-text-color);
+}
+
+.hide-mobile {
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+.show-mobile {
+  @media (max-width: 960px) {
+    display: block;
+  }
+}
