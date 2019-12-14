@@ -1,59 +1,83 @@
-import * as React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import * as React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import Layout from '../templates/Layout';
-import { Button, Card } from '../components';
-import logoSrc from "../assets/images/logo.png";
-import * as styles from './index.module.scss';
+import Layout from "../templates/Layout";
+import { Card, CompanyOverview } from "../components";
 
-interface IndexPageProps { }
+import { company, companyParamsStructure } from "../data";
+import * as styles from "./index.module.scss";
+
+interface IndexPageProps {}
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
-
   public render() {
     return (
-      <Layout>
+      <Layout companyLogoSrc={company.logoSrc} companyLink={company.link}>
         <div className="viewport center column">
-          <div className={[styles.wrapper, "center", "column", "mb-4"].join(" ")}>
-            <img src={logoSrc} alt="" className={[styles.companyLogo, "m-4"].join(" ")} />
-            <h1 className="mb-1">Ogilvy</h1>
-            <p className="secondary-text text-center mb-1">10 years · New York</p>
-            <p className="secondary-text text-center mb-3">In the beginning, there was one Ogilvy, the company founded by David Ogilvy in 1948. Today, there is again one Ogilvy, in 83 countries and 132 offices. We are one doorway to a creative network, re-founded to make brands matter in a complex, noisy, hyper-connected world.</p>
-            <Button>Contact Ogilvy</Button>
+          <div
+            className={[styles.wrapper, "center", "column", "mb-4"].join(" ")}
+          >
+            <CompanyOverview
+              name={company.name}
+              link={company.link}
+              date={company.date}
+              city={company.city}
+              descriprion={company.descriprion}
+              logoSrc={company.logoSrc}
+            />
           </div>
-          <Tabs className={styles.tabs} selectedTabClassName={styles.selectedTab}>
+          <Tabs
+            className={styles.tabs}
+            selectedTabClassName={styles.selectedTab}
+          >
             <div className={[styles.wrapper, "center", "column"].join(" ")}>
               <TabList className={styles.tabList}>
-                <Tab className="secondary-text pb-1">Summary</Tab>
-                <Tab className="secondary-text pb-1">Performance</Tab>
-                <Tab className="secondary-text pb-1">Portfolio</Tab>
-                <Tab className="secondary-text pb-1">Reviews</Tab>
-                <Tab className="secondary-text pb-1">Latest</Tab>
+                {companyParamsStructure
+                  .map(
+                    (category, i) =>
+                      company.params[category.id] && (
+                        <Tab
+                          key={`tab--${i}`}
+                          className="secondary-color-text pb-1"
+                        >
+                          {category.name}
+                        </Tab>
+                      )
+                  )
+                  .filter(Boolean)}
               </TabList>
             </div>
 
-            <TabPanel className={[styles.tabContent, "mt-2"].join(" ")}>
-              <Card className="p-1 m-1">
-                <h2>Summary content 1</h2>
-              </Card>
-              <Card className="p-1 m-1">
-                <h2>Summary content 1</h2>
-              </Card>
-            </TabPanel>
-            <TabPanel>
-              <Card>
-                <h2>Performance content 2</h2>
-              </Card>
-            </TabPanel>
-            <TabPanel>
-              <h2>Portfolio content 2</h2>
-            </TabPanel>
-            <TabPanel>
-              <h2>Reviews content 2</h2>
-            </TabPanel>
-            <TabPanel>
-              <h2>Latest content 2</h2>
-            </TabPanel>
+            {companyParamsStructure
+              .map(
+                (category, k) =>
+                  company.params[category.id] && (
+                    <TabPanel
+                      key={`tab-panel--${k}`}
+                      className={[styles.tabContent, "mt-2"].join(" ")}
+                    >
+                      {category.children &&
+                        category.children.map(
+                          (subCategory, i) =>
+                            company.params[category.id][subCategory.id] && (
+                              <Card
+                                key={`card--${i}`}
+                                className="p-1 m-1"
+                                name={subCategory.name}
+                                id={subCategory.id}
+                                params={
+                                  company.params[category.id][subCategory.id]
+                                }
+                                lines={subCategory.params}
+                                description={subCategory.description}
+                                icon={subCategory.icon}
+                              />
+                            )
+                        )}
+                    </TabPanel>
+                  )
+              )
+              .filter(Boolean)}
           </Tabs>
         </div>
       </Layout>

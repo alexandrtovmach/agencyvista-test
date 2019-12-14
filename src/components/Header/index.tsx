@@ -5,11 +5,13 @@ import { Button } from "../";
 
 import * as styles from "./header.module.scss";
 import avLogoSrc from "../../assets/images/avLogo.svg";
-import logoSrc from "../../assets/images/logo.png";
 
-interface HeaderProps {}
+interface HeaderProps {
+  companyLogoSrc: string;
+  companyLink: string;
+}
 
-const Header: React.SFC<HeaderProps> = ({}) => {
+const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
   return (
     <>
       <header className={styles.header}>
@@ -17,11 +19,11 @@ const Header: React.SFC<HeaderProps> = ({}) => {
           <Link to="/" className={[styles.mainLogo, "center"].join(" ")}>
             <img src={avLogoSrc} alt=""/>
           </Link>
-          <Link to="/results" className="secondary-text hide-mobile">
+          <Link to="/results" className="secondary-color-text hide-mobile">
             ⬅ Back to Results
           </Link>
         </nav>
-        <img src={logoSrc} alt="" className={styles.logo} />
+        <img src={companyLogoSrc} alt="" className={styles.logo} />
         <div className="align-center">
           <Button className="hide-mobile">Contact Ogilvy</Button>
           <img src="https://source.unsplash.com/random" alt="" className={styles.avatar} />
