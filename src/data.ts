@@ -10,7 +10,7 @@ export const company: X | any = {
   name: "Ogilvy",
   city: "New York",
   date: "10 years",
-  link: "https://www.ogilvy.com",
+  link: "mailto:admin@ogilvy.com",
   logoSrc,
   descriprion:
     "In the beginning, there was one Ogilvy, the company founded by David Ogilvy in 1948. Today, there is again one Ogilvy, in 83 countries and 132 offices. We are one doorway to a creative network, re-founded to make brands matter in a complex, noisy, hyper-connected world.",

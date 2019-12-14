@@ -10,9 +10,14 @@ import avLogoSrc from "../../assets/images/avLogo.svg";
 interface HeaderProps {
   companyLogoSrc: string;
   companyLink: string;
+  companyName: string;
 }
 
-const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
+const Header: React.SFC<HeaderProps> = ({
+  companyLogoSrc,
+  companyLink,
+  companyName,
+}) => {
   return (
     <>
       <header className={styles.header}>
@@ -26,7 +31,9 @@ const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
         </nav>
         <img src={companyLogoSrc} alt="" className={styles.logo} />
         <div className="align-center">
-          <Button className="hide-mobile">Contact Ogilvy</Button>
+          <Button className="hide-mobile" link={companyLink}>
+            Contact {companyName}
+          </Button>
           <img
             src="https://source.unsplash.com/random"
             alt=""
@@ -34,7 +41,7 @@ const Header: React.SFC<HeaderProps> = ({ companyLogoSrc, companyLink }) => {
           />
         </div>
       </header>
-      <div className={styles.headerCompensator}/>
+      <div className={styles.headerCompensator} />
     </>
   );
 };

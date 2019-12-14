@@ -33,7 +33,7 @@ const CompanyOverview: React.SFC<CompanyOverviewProps> = ({
         {`${date} · ${city}`}
       </p>
       <p className="secondary-color-text text-center mb-3">{descriprion}</p>
-      <Button>Contact Ogilvy</Button>
+      <Button link={link}>Contact {name}</Button>
     </>
   );
 };

@@ -11,7 +11,7 @@ import * as styles from "./index.module.scss";
 export default class IndexPage extends React.Component<{}, {}> {
   public render() {
     return (
-      <Layout companyLogoSrc={company.logoSrc} companyLink={company.link}>
+      <Layout companyLogoSrc={company.logoSrc} companyLink={company.link} companyName={company.name}>
         <div className="viewport center column">
           <div
             className={classNames(styles.wrapper, "center", "column", "mb-4")}
