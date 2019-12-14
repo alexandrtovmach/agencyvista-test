@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             selectedTabClassName={styles.selectedTab}
           >
             <div className={[styles.wrapper, "center", "column"].join(" ")}>
-              <TabList className={styles.tabList}>
+              <TabList className={[styles.tabList, "mb-2"].join(" ")}>
                 {companyParamsStructure
                   .map(
                     (category, i) =>
@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                   company.params[category.id] && (
                     <TabPanel
                       key={`tab-panel--${k}`}
-                      className={[styles.tabContent, "mt-2"].join(" ")}
+                      className={[styles.tabContent].join(" ")}
                     >
                       {category.children &&
                         category.children.map(
@@ -62,7 +62,6 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                             company.params[category.id][subCategory.id] && (
                               <Card
                                 key={`card--${i}`}
-                                className="p-1 m-1"
                                 name={subCategory.name}
                                 id={subCategory.id}
                                 params={

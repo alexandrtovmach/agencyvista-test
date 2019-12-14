@@ -1,7 +1,9 @@
 import logoSrc from "./assets/images/logo.png";
+import clientSizeIconSrc from "./assets/images/icon_1.png";
+import industryFocusIconSrc from "./assets/images/icon_2.png";
 
 interface X {
-  [key: string]: X[keyof X]
+  [key: string]: X[keyof X];
 }
 
 export const company: X | any = {
@@ -26,6 +28,20 @@ export const company: X | any = {
         automotive: 15,
         financialServices: 10
       }
+    },
+    performance: {
+      clientSize: {
+        smallBusinessRevenue: 20,
+        mediumBusinessRevenue: 15,
+        largeBusinessRevenue: 30,
+        enterpriseRevenue: 30
+      },
+      industryFocus: {
+        healthcare: 70,
+        businessServices: 0,
+        automotive: 5,
+        financialServices: 0
+      }
     }
   }
 };
@@ -37,7 +53,7 @@ export const companyParamsStructure = [
     children: [
       {
         id: "clientSize",
-        icon: "",
+        icon: clientSizeIconSrc,
         name: "Client Size",
         description:
           "View all the business sizes this agency current manages, as well as which business size they choose to work with the most.",
@@ -62,7 +78,7 @@ export const companyParamsStructure = [
       },
       {
         id: "industryFocus",
-        icon: "",
+        icon: industryFocusIconSrc,
         name: "Industry Focus",
         description:
           "See which industries this agency has the most experience and expertise in.",
@@ -87,7 +103,7 @@ export const companyParamsStructure = [
       }
     ]
   },
-    {
+  {
     id: "performance",
     name: "Performance",
     children: [
