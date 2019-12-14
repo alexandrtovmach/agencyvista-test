@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Header } from "../../components";
 import * as styles from "./layout.module.scss";
-import "./reset.scss";
 
 interface LayoutProps {}
 
