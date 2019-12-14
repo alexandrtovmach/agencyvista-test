@@ -28,8 +28,8 @@ const CompanyOverview: React.SFC<CompanyOverviewProps> = ({
         alt=""
         className={classNames(styles.companyLogo, "m-4")}
       />
-      <h1 className="mb-1">{name}</h1>
-      <p className="secondary-color-text text-center mb-1">
+      <h1 className="mb-1 text-normal title">{name}</h1>
+      <p className="secondary-color-text text-center mb-1 paragraph">
         {`${date} · ${city}`}
       </p>
       <p className="secondary-color-text text-center mb-3">{descriprion}</p>

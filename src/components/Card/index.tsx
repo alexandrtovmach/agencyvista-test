@@ -27,7 +27,7 @@ const Card: React.SFC<CardProps> = ({
       className={classNames(styles.card, "column", "align-center", className)}
     >
       <div className={classNames(styles.info, "column", "align-center")}>
-        <img src={icon} className="mb-1" alt={name} />
+        <img src={icon} className="mb-1 mt-1" alt={name} />
         <h3 className="mb-1 text-uppercase text-normal">{name}</h3>
         <p className="secondary-color-text text-center mb-2">{description}</p>
       </div>
@@ -37,20 +37,20 @@ const Card: React.SFC<CardProps> = ({
             <div key={`card-line--${i}`}>
               <Line
                 percent={params && params[line.id]}
-                strokeWidth={2}
-                trailWidth={2}
+                strokeWidth={1}
+                trailWidth={1}
                 strokeColor="var(--main-color)"
                 trailColor="var(--secondary-light-color)"
               />
-              <p
+              <h3
                 className={
                   params && params[line.id]
-                    ? "main-color-text mt-h mb-1"
-                    : "secondary-color-text mt-h mb-1"
+                    ? "main-color-text mb-1 text-normal"
+                    : "secondary-color-text mb-1 text-normal"
                 }
               >
                 {line.name}
-              </p>
+              </h3>
             </div>
           ))}
       </div>
