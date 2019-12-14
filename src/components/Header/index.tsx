@@ -22,7 +22,7 @@ const Header: React.SFC<HeaderProps> = ({}) => {
           </Link>
         </nav>
         <img src={logoSrc} alt="" className={styles.logo} />
-        <div className="vertical-center">
+        <div className="align-center">
           <Button className="hide-mobile">Contact Ogilvy</Button>
           <img src="https://source.unsplash.com/random" alt="" className={styles.avatar} />
         </div>

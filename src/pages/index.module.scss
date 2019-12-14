@@ -1,0 +1,27 @@
+.company-logo {
+  width: calc(var(--size-4)*3);
+}
+
+.wrapper {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs {
+  width: 100%;
+  .tab-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    >* {
+      cursor: pointer;
+    }
+
+    .selected-tab {
+      color: var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+    }
+  }
+}

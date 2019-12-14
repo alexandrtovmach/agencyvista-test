@@ -5,13 +5,11 @@ body {
   --dark-text-color: #272831;
   --secondary-dark-text-color: #9193A9;
 
-  --size-1: 0.1em;
-  --size-2: 0.2em;
-  --size-3: 0.5em;
-  --size-4: 1em;
-  --size-5: 2em;
-  --size-6: 5em;
-  --size-7: 8em;
-  --size-8: 16em;
-  --size-9: 32em;
+  --size-h: 0.5em;
+  --size-1: 1em;
+  --size-2: 1.5em;
+  --size-3: 3em;
+  --size-4: 4em;
+
+  --header-height: var(--size-3);
 }

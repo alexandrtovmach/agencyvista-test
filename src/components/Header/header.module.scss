@@ -1,44 +1,41 @@
-$header-height: 50px;
-
 .header {
   position: fixed;
-  width: calc(100% - var(--size-5)*2);
-  height: $header-height;
+  width: calc(100% - var(--size-2)*2);
+  height: var(--header-height);
+  padding: 0 var(--size-2);
   background: #FFFFFF;
-  box-shadow: 0px var(--size-1) var(--size-2) rgba(39, 40, 49, 0.03);
+  box-shadow: 0 0 var(--size-h) rgba(39, 40, 49, 0.03);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--size-5);
 
   @media (max-width: 960px) {
-    width: calc(100% - var(--size-3)*2);
-    padding: 0 var(--size-3);
+    width: calc(100% - var(--size-h)*2);
+    padding: 0 var(--size-h);
   }
 
   nav {
     .main-logo {
-      width: var(--size-5);
-      height: var(--size-5);
-      margin: 0 var(--size-4) 0 0;
+      width: var(--size-2);
+      height: var(--size-2);
+      margin: 0 var(--size-1) 0 0;
     }
     
   }
 
   .logo {
-    height: calc(100% - var(--size-3)*2);
-    margin: var(--size-3) 0;
+    width: var(--size-4);
   }
 
   .avatar {
-    width: var(--size-5);
-    height: var(--size-5);
-    margin: 0 0 0 var(--size-4);
+    width: var(--size-2);
+    height: var(--size-2);
+    margin: 0 0 0 var(--size-1);
     border-radius: 50%;
   }
 }
 
 .header-compensator {
   width: 100%;
-  height: $header-height;
+  height: var(--header-height);
 }

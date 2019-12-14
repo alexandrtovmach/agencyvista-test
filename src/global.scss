@@ -1,17 +1,43 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@import '../node_modules/react-tabs/style/react-tabs.scss';
+
+@include spacing;
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.vertical-center {
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.align-center {
   display: flex;
   align-items: center;
 }
-.horizontal-center {
+.justify-center {
   display: flex;
   justify-content: center;
 }
 
+.viewport {
+  width: calc(100% - var(--size-2)*2);
+  padding: 0 var(--size-2);
+  min-height: calc(100vh - var(--header-height));
+
+  @media (max-width: 960px) {
+    width: calc(100% - var(--size-h)*2);
+    padding: 0 var(--size-h);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
 .secondary-text {
   font-size: 80%;
   color: var(--secondary-dark-text-color);
