@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import Layout from '../templates/Layout';
-import { Button } from '../components';
+import { Button, Card } from '../components';
 import logoSrc from "../assets/images/logo.png";
 import * as styles from './index.module.scss';
 
@@ -32,11 +32,18 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
               </TabList>
             </div>
 
-            <TabPanel>
-              <h2>Summary content 1</h2>
+            <TabPanel className={[styles.tabContent, "mt-2"].join(" ")}>
+              <Card className="p-1 m-1">
+                <h2>Summary content 1</h2>
+              </Card>
+              <Card className="p-1 m-1">
+                <h2>Summary content 1</h2>
+              </Card>
             </TabPanel>
             <TabPanel>
-              <h2>Performance content 2</h2>
+              <Card>
+                <h2>Performance content 2</h2>
+              </Card>
             </TabPanel>
             <TabPanel>
               <h2>Portfolio content 2</h2>

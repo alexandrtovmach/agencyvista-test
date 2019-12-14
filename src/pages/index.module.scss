@@ -24,4 +24,11 @@
       border-bottom: 2px solid var(--main-color);
     }
   }
+
+  .tab-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }

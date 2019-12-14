@@ -4,7 +4,7 @@
   height: var(--header-height);
   padding: 0 var(--size-2);
   background: #FFFFFF;
-  box-shadow: 0 0 var(--size-h) rgba(39, 40, 49, 0.03);
+  box-shadow: 0 0 var(--size-h) var(--secondary-light-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
