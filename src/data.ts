@@ -56,7 +56,7 @@ export const company: X | any = {
         automotive: 15,
         financialServices: 10,
       },
-    }
+    },
   },
 };
 
