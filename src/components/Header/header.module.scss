@@ -15,12 +15,14 @@
   }
 
   nav {
+    a {
+      font-size: 80%;
+    }
     .main-logo {
       width: var(--size-2);
       height: var(--size-2);
       margin: 0 var(--size-1) 0 0;
     }
-    
   }
 
   .logo {
