@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/agencyvista-test",
   siteMetadata: {
     name: `Hello Typescript World!`,
     tagline: `Gatsby + SASS + Typescript = 💪`
