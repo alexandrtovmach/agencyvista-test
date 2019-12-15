@@ -56,35 +56,7 @@ export const company: X | any = {
         automotive: 15,
         financialServices: 10,
       },
-    },
-    reviews: {
-      deliverySpeed: {
-        ideaGeneration: 90,
-        buildTeam: 70,
-        development: 50,
-        promotion: 30,
-      },
-      economicMark: {
-        finances: 20,
-        time: 0,
-        humanResources: 90,
-        rate: 90,
-      },
-    },
-    latest: {
-      clientSize: {
-        smallBusinessRevenue: 0,
-        mediumBusinessRevenue: 10,
-        largeBusinessRevenue: 60,
-        enterpriseRevenue: 20,
-      },
-      industryFocus: {
-        healthcare: 50,
-        businessServices: 20,
-        automotive: 15,
-        financialServices: 10,
-      },
-    },
+    }
   },
 };
 
